@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lostime.cn/"/>
-  <updated>2016-06-05T16:45:22.000Z</updated>
+  <updated>2016-06-06T13:20:42.178Z</updated>
   <id>http://lostime.cn/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <title>Hello World</title>
     <link href="http://lostime.cn/hello-world/"/>
     <id>http://lostime.cn/hello-world/</id>
-    <published>2016-06-06T12:52:44.225Z</published>
-    <updated>2016-06-05T16:45:22.000Z</updated>
+    <published>2016-06-06T13:20:42.182Z</published>
+    <updated>2016-06-06T13:20:42.178Z</updated>
     
     <content type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -39,6 +39,75 @@
     
     </summary>
     
+    
+  </entry>
+  
+  <entry>
+    <title>Amh5.2+Ghost,Ubuntu14.04安装ghost教程</title>
+    <link href="http://lostime.cn/how-to-deploy-ghost-2//"/>
+    <id>http://lostime.cn/how-to-deploy-ghost-2//</id>
+    <published>2016-06-05T22:32:55.000Z</published>
+    <updated>2016-06-06T13:20:42.166Z</updated>
+    
+    <content type="html">&lt;p&gt;之前我也发过一个《&lt;a href=&quot;http://wenda.ghostchina.com/article/16&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;AMH4.2+Node.js，完美部署Ghost运行环境&lt;/a&gt;》的教程，当时一直没有解决Amh5.2控制面板安装Ghost出现的不明错误，现在经过一个星期的实验，无数次的初始化服务器，最终，我还是搞定了。&lt;/p&gt;
+&lt;p&gt;废话不多说，教程开始：&lt;/p&gt;
+&lt;h2 id=&quot;环境&quot;&gt;&lt;a href=&quot;#环境&quot; class=&quot;headerlink&quot; title=&quot;环境&quot;&gt;&lt;/a&gt;环境&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Ubuntu 14.04&lt;/li&gt;
+&lt;li&gt;Amh 5.2&lt;/li&gt;
+&lt;li&gt;Node.js v0.10.44&lt;/li&gt;
+&lt;li&gt;npm v2.15.0&lt;/li&gt;
+&lt;li&gt;Ghost 0.7.4 中文版&lt;/li&gt;
+&lt;li&gt;PM2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;Amh-5-2&quot;&gt;&lt;a href=&quot;#Amh-5-2&quot; class=&quot;headerlink&quot; title=&quot;Amh 5.2&quot;&gt;&lt;/a&gt;Amh 5.2&lt;/h2&gt;&lt;h3 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h3&gt;&lt;p&gt;==有一点注意一下，Amh5.2是收费的，6元/月，==&lt;/p&gt;
+&lt;p&gt;1) 使用 root 账号登录 Linux 服务器。&lt;/p&gt;
+&lt;p&gt;2) 执行 amh 安装脚本。&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;wget http://amh.sh/amh.sh &amp;amp;&amp;amp; bash amh.sh 2&amp;gt;&amp;amp;1 | tee amh.log&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;3) 选择使用距离您当前服务器所在位置最佳的amh源码镜像。&lt;/p&gt;
+&lt;p&gt;中国[CN] 输入1，美国[USA] 输入2，日本[JP] 或其它输入3，回车即可自动完成安装。&lt;/p&gt;
+&lt;p&gt;极速安装方式大约只需要1至3分钟(以服务器性能为准)&lt;/p&gt;
+&lt;p&gt;成功安装后系统会提示AMH与MySQL默认账号密码。&lt;/p&gt;
+&lt;p&gt;可使用普通连接访问面板，&lt;a href=&quot;http://ip:8888&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://ip:8888&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;或加密的连接访问面板，&lt;a href=&quot;https://ip:9999&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://ip:9999&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;配置&quot;&gt;&lt;a href=&quot;#配置&quot; class=&quot;headerlink&quot; title=&quot;配置&quot;&gt;&lt;/a&gt;配置&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;登陆Amh后台，安装Nginx、Mysql，php在安装Amh的时候已经安装好了，&lt;/li&gt;
+&lt;li&gt;安装LNMP，创建环境，选择Nginx、Mysql、PHP，&lt;/li&gt;
+&lt;li&gt;建立虚拟主机，把主标识域名和绑定域名填上就可以了，&lt;/li&gt;
+&lt;li&gt;登陆ssh，进入/home/wwwroot/你创建的环境名/vhost/，修改里面的*.conf，&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo vim /home/wwwroot/你创建的环境名/vhost/*.conf //编辑*.conf，当然你也可以用Winscp修改&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;先按下 S 键，再将如下内容拷贝覆盖原内容。注意将 My-Domain-Name.com 改成你要设置的网址。在编辑完成后，按下 Esc，输入 :wq! 回车退出。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;server &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    listen 80;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    server_name My-Ghost-Blog.com; //换成你要绑定的域名，可以多个，空格分开&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    location / &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        proxy_set_header   X-Real-IP $remote_addr;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        proxy_set_header   Host      $http_host;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        proxy_pass         http://127.0.0.1:2368;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;到Amh控制面板上重载Nginx。&lt;/p&gt;
+&lt;h2 id=&quot;安装Node-js&quot;&gt;&lt;a href=&quot;#安装Node-js&quot; class=&quot;headerlink&quot; title=&quot;安装Node.js&quot;&gt;&lt;/a&gt;安装Node.js&lt;/h2&gt;&lt;p&gt;我安装的是0.10.*版本，不要求新，我们求稳&lt;/p&gt;
+&lt;p&gt;cd回服务器根目录。执行以下命令：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;curl -sL https://deb.nodesource.com/setup_0.10 | sudo -E bash -  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install nodejs //由于nodejs服务器在国外，这里下载可能要多试几次&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;安装完成，执行&lt;code&gt;node -v&lt;/code&gt;和&lt;code&gt;npm -v&lt;/code&gt;，正常会显示其版本号。&lt;/p&gt;
+&lt;h2 id=&quot;安装Ghost&quot;&gt;&lt;a href=&quot;#安装Ghost&quot; class=&quot;headerlink&quot; title=&quot;安装Ghost&quot;&gt;&lt;/a&gt;安装Ghost&lt;/h2&gt;&lt;p&gt;我安装的是Ghost 0.7.4 中文版&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cd /home/wwwroot/你创建的环境名/domain/主标识域名/web //进入网站根目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;wget http://dl.ghostchina.com/Ghost-0.7.4-zh-full.zip //下载Ghost源码包&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;unzip Ghost-0.7.4-zh-full.zip //解压Ghost源码包&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;然后使用Winscp，将进入网站根目录，将Ghost-0.7.4-zh-full文件夹里的文件全部剪切到网站根目录下&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm start //启动开发者模式下的Ghost，用于检查有没有安装成功&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;然后一切顺利，用浏览器访问此地址即可预览 Ghost。&lt;/p&gt;
+&lt;h2 id=&quot;安装PM2&quot;&gt;&lt;a href=&quot;#安装PM2&quot; class=&quot;headerlink&quot; title=&quot;安装PM2&quot;&gt;&lt;/a&gt;安装PM2&lt;/h2&gt;&lt;p&gt;要想让Ghost作为网站登上因特网的台面，我们还不能让其运行在默认的开发模式。需要让其运行在生产模式，且当其运行进程退出时自动重启。因此我们可以使用进程守护程序“PM2”达到此目的。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cd /home/wwwroot/你创建的环境名/domain/主标识域名/web //进入网站根目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo npm install pm2 -g //安装pm2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;我们要设置环境变量为“production”生产模式！“index.js”是程序启动的入口。最后给这个PM2的进程命名为”Ghost” 于是，执行下面的命令：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;NODE_ENV=production pm2 start index.js --name &amp;quot;ghost&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;让PM2知道在开机后自动运行我们的网站：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pm2 startup Ubuntu&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pm2 save&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;提示1: pm2 kill ghost //关闭所有PM2进程。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;提示2: pm2 &amp;lt;start|stop|restart&amp;gt; ghost  //分别是启动|停止|重启 ghost程序 。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;提示3: pm2 startup &amp;lt;centos|ubuntu|amazon&amp;gt; //这是让pm2能够能够在这3个系统上自动启动。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;至此，PM2已经可以守护Ghost博客在线运行&lt;/p&gt;
+&lt;p&gt;最后，重启服务器，大功告成！&lt;/p&gt;
+&lt;p&gt;另外建议安装服务器安全狗，这年头，吃饱了没事干的人多如牛毛。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;之前我也发过一个《&lt;a href=&quot;http://wenda.ghostchina.com/article/16&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;AMH4.2+Node.js，完美部署Ghost运行环境&lt;/a&gt;》的教程，当时一直没有解决Amh
+    
+    </summary>
+    
+      <category term="折腾人生" scheme="http://lostime.cn/categories/%E6%8A%98%E8%85%BE%E4%BA%BA%E7%94%9F/"/>
+    
+    
+      <category term="AMH" scheme="http://lostime.cn/tags/AMH/"/>
+    
+      <category term="Ghost" scheme="http://lostime.cn/tags/Ghost/"/>
+    
+      <category term="Ubuntu" scheme="http://lostime.cn/tags/Ubuntu/"/>
     
   </entry>
   

@@ -18,6 +18,55 @@
 ]]></content>
     </entry>
     
+    <entry>
+      <title><![CDATA[Amh5.2+Ghost,Ubuntu14.04安装ghost教程]]></title>
+      <url>http://lostime.cn/how-to-deploy-ghost-2/</url>
+      <content type="html"><![CDATA[<p>之前我也发过一个《<a href="http://wenda.ghostchina.com/article/16" target="_blank" rel="external">AMH4.2+Node.js，完美部署Ghost运行环境</a>》的教程，当时一直没有解决Amh5.2控制面板安装Ghost出现的不明错误，现在经过一个星期的实验，无数次的初始化服务器，最终，我还是搞定了。</p>
+<p>废话不多说，教程开始：</p>
+<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><ul>
+<li>Ubuntu 14.04</li>
+<li>Amh 5.2</li>
+<li>Node.js v0.10.44</li>
+<li>npm v2.15.0</li>
+<li>Ghost 0.7.4 中文版</li>
+<li>PM2</li>
+</ul>
+<h2 id="Amh-5-2"><a href="#Amh-5-2" class="headerlink" title="Amh 5.2"></a>Amh 5.2</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>==有一点注意一下，Amh5.2是收费的，6元/月，==</p>
+<p>1) 使用 root 账号登录 Linux 服务器。</p>
+<p>2) 执行 amh 安装脚本。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://amh.sh/amh.sh &amp;&amp; bash amh.sh 2&gt;&amp;1 | tee amh.log</span><br></pre></td></tr></table></figure></p>
+<p>3) 选择使用距离您当前服务器所在位置最佳的amh源码镜像。</p>
+<p>中国[CN] 输入1，美国[USA] 输入2，日本[JP] 或其它输入3，回车即可自动完成安装。</p>
+<p>极速安装方式大约只需要1至3分钟(以服务器性能为准)</p>
+<p>成功安装后系统会提示AMH与MySQL默认账号密码。</p>
+<p>可使用普通连接访问面板，<a href="http://ip:8888" target="_blank" rel="external">http://ip:8888</a></p>
+<p>或加密的连接访问面板，<a href="https://ip:9999" target="_blank" rel="external">https://ip:9999</a></p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><ol>
+<li>登陆Amh后台，安装Nginx、Mysql，php在安装Amh的时候已经安装好了，</li>
+<li>安装LNMP，创建环境，选择Nginx、Mysql、PHP，</li>
+<li>建立虚拟主机，把主标识域名和绑定域名填上就可以了，</li>
+<li>登陆ssh，进入/home/wwwroot/你创建的环境名/vhost/，修改里面的*.conf，</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /home/wwwroot/你创建的环境名/vhost/*.conf //编辑*.conf，当然你也可以用Winscp修改</span><br></pre></td></tr></table></figure>
+<p>先按下 S 键，再将如下内容拷贝覆盖原内容。注意将 My-Domain-Name.com 改成你要设置的网址。在编辑完成后，按下 Esc，输入 :wq! 回车退出。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 80;</span><br><span class="line">    server_name My-Ghost-Blog.com; //换成你要绑定的域名，可以多个，空格分开</span><br><span class="line">    location / &#123;</span><br><span class="line">        proxy_set_header   X-Real-IP $remote_addr;</span><br><span class="line">        proxy_set_header   Host      $http_host;</span><br><span class="line">        proxy_pass         http://127.0.0.1:2368;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>到Amh控制面板上重载Nginx。</p>
+<h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><p>我安装的是0.10.*版本，不要求新，我们求稳</p>
+<p>cd回服务器根目录。执行以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -sL https://deb.nodesource.com/setup_0.10 | sudo -E bash -  </span><br><span class="line">sudo apt-get install nodejs //由于nodejs服务器在国外，这里下载可能要多试几次</span><br></pre></td></tr></table></figure>
+<p>安装完成，执行<code>node -v</code>和<code>npm -v</code>，正常会显示其版本号。</p>
+<h2 id="安装Ghost"><a href="#安装Ghost" class="headerlink" title="安装Ghost"></a>安装Ghost</h2><p>我安装的是Ghost 0.7.4 中文版</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /home/wwwroot/你创建的环境名/domain/主标识域名/web //进入网站根目录</span><br><span class="line">wget http://dl.ghostchina.com/Ghost-0.7.4-zh-full.zip //下载Ghost源码包</span><br><span class="line">unzip Ghost-0.7.4-zh-full.zip //解压Ghost源码包</span><br></pre></td></tr></table></figure>
+<p>然后使用Winscp，将进入网站根目录，将Ghost-0.7.4-zh-full文件夹里的文件全部剪切到网站根目录下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm start //启动开发者模式下的Ghost，用于检查有没有安装成功</span><br></pre></td></tr></table></figure>
+<p>然后一切顺利，用浏览器访问此地址即可预览 Ghost。</p>
+<h2 id="安装PM2"><a href="#安装PM2" class="headerlink" title="安装PM2"></a>安装PM2</h2><p>要想让Ghost作为网站登上因特网的台面，我们还不能让其运行在默认的开发模式。需要让其运行在生产模式，且当其运行进程退出时自动重启。因此我们可以使用进程守护程序“PM2”达到此目的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /home/wwwroot/你创建的环境名/domain/主标识域名/web //进入网站根目录</span><br><span class="line">sudo npm install pm2 -g //安装pm2</span><br></pre></td></tr></table></figure></p>
+<p>我们要设置环境变量为“production”生产模式！“index.js”是程序启动的入口。最后给这个PM2的进程命名为”Ghost” 于是，执行下面的命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NODE_ENV=production pm2 start index.js --name &quot;ghost&quot;</span><br></pre></td></tr></table></figure></p>
+<p>让PM2知道在开机后自动运行我们的网站：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">pm2 startup Ubuntu</span><br><span class="line">pm2 save</span><br><span class="line">提示1: pm2 kill ghost //关闭所有PM2进程。</span><br><span class="line">提示2: pm2 &lt;start|stop|restart&gt; ghost  //分别是启动|停止|重启 ghost程序 。</span><br><span class="line">提示3: pm2 startup &lt;centos|ubuntu|amazon&gt; //这是让pm2能够能够在这3个系统上自动启动。</span><br></pre></td></tr></table></figure></p>
+<p>至此，PM2已经可以守护Ghost博客在线运行</p>
+<p>最后，重启服务器，大功告成！</p>
+<p>另外建议安装服务器安全狗，这年头，吃饱了没事干的人多如牛毛。</p>
+]]></content>
+    </entry>
+    
   
   
 </search>
