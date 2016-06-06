@@ -43,38 +43,11 @@
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://lostime.cn/hello-world/"/>
-    <id>http://lostime.cn/hello-world/</id>
-    <published>2016-06-06T13:20:42.182Z</published>
-    <updated>2016-06-06T13:20:42.178Z</updated>
-    
-    <content type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;Run-server&quot;&gt;&lt;a href=&quot;#Run-server&quot; class=&quot;headerlink&quot; title=&quot;Run server&quot;&gt;&lt;/a&gt;Run server&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/server.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Server&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;Generate-static-files&quot;&gt;&lt;a href=&quot;#Generate-static-files&quot; class=&quot;headerlink&quot; title=&quot;Generate static files&quot;&gt;&lt;/a&gt;Generate static files&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/generating.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Generating&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;Deploy-to-remote-sites&quot;&gt;&lt;a href=&quot;#Deploy-to-remote-sites&quot; class=&quot;headerlink&quot; title=&quot;Deploy to remote sites&quot;&gt;&lt;/a&gt;Deploy to remote sites&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/deployment.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Deployment&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>Amh5.2+Ghost,Ubuntu14.04安装ghost教程</title>
     <link href="http://lostime.cn/how-to-deploy-ghost-2//"/>
     <id>http://lostime.cn/how-to-deploy-ghost-2//</id>
     <published>2016-06-05T22:32:55.000Z</published>
-    <updated>2016-06-06T13:20:42.166Z</updated>
+    <updated>2016-06-06T15:02:52.320Z</updated>
     
     <content type="html">&lt;p&gt;之前我也发过一个《&lt;a href=&quot;http://wenda.ghostchina.com/article/16&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;AMH4.2+Node.js，完美部署Ghost运行环境&lt;/a&gt;》的教程，当时一直没有解决Amh5.2控制面板安装Ghost出现的不明错误，现在经过一个星期的实验，无数次的初始化服务器，最终，我还是搞定了。&lt;/p&gt;
 &lt;p&gt;废话不多说，教程开始：&lt;/p&gt;
@@ -94,7 +67,7 @@
 &lt;p&gt;极速安装方式大约只需要1至3分钟(以服务器性能为准)&lt;/p&gt;
 &lt;p&gt;成功安装后系统会提示AMH与MySQL默认账号密码。&lt;/p&gt;
 &lt;p&gt;可使用普通连接访问面板，&lt;a href=&quot;http://ip:8888&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://ip:8888&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;或加密的连接访问面板，&lt;a href=&quot;https://ip:9999&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://ip:9999&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;或加密的连接访问面板，&lt;a href=&quot;https://ip:9999&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://ip:9999&lt;/a&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;配置&quot;&gt;&lt;a href=&quot;#配置&quot; class=&quot;headerlink&quot; title=&quot;配置&quot;&gt;&lt;/a&gt;配置&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;登陆Amh后台，安装Nginx、Mysql，php在安装Amh的时候已经安装好了，&lt;/li&gt;
 &lt;li&gt;安装LNMP，创建环境，选择Nginx、Mysql、PHP，&lt;/li&gt;
@@ -123,7 +96,25 @@
     
     <summary type="html">
     
-      &lt;p&gt;之前我也发过一个《&lt;a href=&quot;http://wenda.ghostchina.com/article/16&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;AMH4.2+Node.js，完美部署Ghost运行环境&lt;/a&gt;》的教程，当时一直没有解决Amh
+      &lt;p&gt;之前我也发过一个《&lt;a href=&quot;http://wenda.ghostchina.com/article/16&quot;&gt;AMH4.2+Node.js，完美部署Ghost运行环境&lt;/a&gt;》的教程，当时一直没有解决Amh5.2控制面板安装Ghost出现的不明错误，现在经过一个星期的实验，无数次的初始化服务器，最终，我还是搞定了。&lt;/p&gt;
+&lt;p&gt;废话不多说，教程开始：&lt;/p&gt;
+&lt;h2 id=&quot;环境&quot;&gt;&lt;a href=&quot;#环境&quot; class=&quot;headerlink&quot; title=&quot;环境&quot;&gt;&lt;/a&gt;环境&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Ubuntu 14.04&lt;/li&gt;
+&lt;li&gt;Amh 5.2&lt;/li&gt;
+&lt;li&gt;Node.js v0.10.44&lt;/li&gt;
+&lt;li&gt;npm v2.15.0&lt;/li&gt;
+&lt;li&gt;Ghost 0.7.4 中文版&lt;/li&gt;
+&lt;li&gt;PM2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;Amh-5-2&quot;&gt;&lt;a href=&quot;#Amh-5-2&quot; class=&quot;headerlink&quot; title=&quot;Amh 5.2&quot;&gt;&lt;/a&gt;Amh 5.2&lt;/h2&gt;&lt;h3 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h3&gt;&lt;p&gt;==有一点注意一下，Amh5.2是收费的，6元/月，==&lt;/p&gt;
+&lt;p&gt;1) 使用 root 账号登录 Linux 服务器。&lt;/p&gt;
+&lt;p&gt;2) 执行 amh 安装脚本。&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;wget http://amh.sh/amh.sh &amp;amp;&amp;amp; bash amh.sh 2&amp;gt;&amp;amp;1 | tee amh.log&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;3) 选择使用距离您当前服务器所在位置最佳的amh源码镜像。&lt;/p&gt;
+&lt;p&gt;中国[CN] 输入1，美国[USA] 输入2，日本[JP] 或其它输入3，回车即可自动完成安装。&lt;/p&gt;
+&lt;p&gt;极速安装方式大约只需要1至3分钟(以服务器性能为准)&lt;/p&gt;
+&lt;p&gt;成功安装后系统会提示AMH与MySQL默认账号密码。&lt;/p&gt;
+&lt;p&gt;可使用普通连接访问面板，&lt;a href=&quot;http://ip:8888&quot;&gt;http://ip:8888&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;或加密的连接访问面板，&lt;a href=&quot;https://ip:9999&quot;&gt;https://ip:9999&lt;/a&gt;&lt;br&gt;
     
     </summary>
     
